@@ -1,0 +1,10 @@
+---
+
+chl_service_group: tuxedo
+chl_service_users:
+  - ceu
+  - ewf
+  - xml
+
+tuxedo_version: "8.1"
+tuxedo_install_directory: "/opt/tuxedo-{{ tuxedo_version }}"
