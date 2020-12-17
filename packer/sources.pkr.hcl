@@ -15,8 +15,8 @@ source "amazon-ebs" "builder" {
     delete_on_termination = true
   }
 
-launch_block_device_mappings {
-    count = var.swap_volume_size_gb > 0 ? 1 : 0
+  dynamic "launch_block_device_mappings" {
+    for_each = var.swap_volume_size_gb > 0 ? [1] : []
 
     content {
       device_name = var.swap_volume_device_node
