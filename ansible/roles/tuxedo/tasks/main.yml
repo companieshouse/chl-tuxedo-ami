@@ -69,7 +69,7 @@
 - name: Download Tuxedo artefact
   aws_s3:
     bucket: "{{ resource_bucket_name }}"
-    object: "{{ resource_bucket_bea_tuxedo_prefix }}/tuxedo-{{ tuxedo_version }}.tar.gz"
+    object: "{{ resource_bucket_tuxedo_prefix }}/tuxedo-{{ tuxedo_version }}.tar.gz"
     dest: "{{ temp_dir.path }}/tuxedo-{{ tuxedo_version }}.tar.gz"
     mode: get
 

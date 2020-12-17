@@ -50,14 +50,9 @@ variable "resource_bucket_name" {
   description = "The name of the S3 resources bucket"
 }
 
-variable "resource_bucket_bea_tuxedo_prefix" {
+variable "resource_bucket_tuxedo_prefix" {
   type        = string
-  description = "The object prefix for BEA Tuxedo packages within the S3 resources bucket"
-}
-
-variable "resource_bucket_chl_tuxedo_prefix" {
-  type        = string
-  description = "The object prefix for CHL Tuxedo packages within the S3 resources bucket"
+  description = "The object prefix for Tuxedo packages within the S3 resources bucket"
 }
 
 variable "root_volume_size_gb" {
