@@ -50,8 +50,15 @@ variable "resource_bucket_name" {
   description = "The name of the S3 resources bucket"
 }
 
+variable "resource_bucket_oracle_database_prefix" {
+  type        = string
+  default     = "packages/oracle-database"
+  description = "The object prefix for Oracle Database packages within the S3 resources bucket"
+}
+
 variable "resource_bucket_tuxedo_prefix" {
   type        = string
+  default     = "packages/tuxedo"
   description = "The object prefix for Tuxedo packages within the S3 resources bucket"
 }
 
