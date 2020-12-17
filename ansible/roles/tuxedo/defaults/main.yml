@@ -6,5 +6,8 @@ chl_service_users:
   - ewf
   - xml
 
+oracle_database_version: "10.2.0"
+oracle_database_install_directory: "/opt/oracle/{{ oracle_database_version }}"
+
 tuxedo_version: "8.1"
-tuxedo_install_directory: "/opt/tuxedo-{{ tuxedo_version }}"
+tuxedo_install_directory: "/opt/tuxedo/{{ tuxedo_version }}"
