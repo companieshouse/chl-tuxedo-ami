@@ -12,3 +12,34 @@
     opts: defaults
     state: present
   when: swap_volume_enabled | bool
+
+- name: Install the 'Development tools' package group
+  yum:
+    name: "@Development tools"
+    state: present
+
+- name: Install i686 build-time software dependencies
+  yum:
+    name:
+      - expat-devel.i686
+      - glibc-devel.i686
+      - libcurl-devel.i686
+      - ncurses-devel.i686
+      - openssl-devel.i686
+      - readline-devel.i686
+    state: latest
+
+- name: Install i686 run-time software dependencies
+  yum:
+    name:
+      - glib-static.i686
+      - glibc.i686
+      - libgcc.i686
+      - libstdc++.i686
+      - openssl-libs.i686
+      - zlib.i686
+    state: latest
+
+- fail:
+    msg: Skip final AMI creation during development
+  when: true
