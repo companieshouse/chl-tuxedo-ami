@@ -1,8 +1,10 @@
 ---
 
 - name: Determine UUID of swap volume
-  shell: "blkid -s UUID -o value {{ swap_volume_device_node }}"
-    register: swap_volume
+  ansible.builtin.shell:
+  args:
+    cmd: "blkid -s UUID -o value {{ swap_volume_device_node }}"
+  register: swap_volume
 
 - name: Add swap volume to filesystem table
   ansible.posix.mount:
