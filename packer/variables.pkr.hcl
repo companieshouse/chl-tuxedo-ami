@@ -86,7 +86,7 @@ variable "swap_volume_device_node" {
 
 variable "swap_volume_size_gb" {
   type        = number
-  default     = 1
+  default     = 0
   description = "The EC2 instance swap volume size in Gibibytes (GiB); set to 0 to disable swap volume"
 }
 
