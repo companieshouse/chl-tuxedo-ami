@@ -11,7 +11,8 @@ build {
       "-e", "resource_bucket_name=${var.resource_bucket_name}",
       "-e", "resource_bucket_bea_tuxedo_prefix=${var.resource_bucket_bea_tuxedo_prefix}",
       "-e", "resource_bucket_chl_tuxedo_prefix=${var.resource_bucket_chl_tuxedo_prefix}",
-      "-e", "swap_volume_device_node=${var.swap_volume_device_node}"
+      "-e", "swap_volume_device_node=${var.swap_volume_device_node}",
+      "-e", "swap_volume_enabled=${var.swap_volume_size > 0 ? true : false}"
     ]
   }
 }
