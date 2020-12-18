@@ -46,7 +46,7 @@
     dest: "/usr/lib/libstdc++-libc6.2-2.so.3"
     mode: get
 
-- name: Create service groups
+- name: Create service group
   group:
     name: "{{ chl_service_group }}"
     state: present
