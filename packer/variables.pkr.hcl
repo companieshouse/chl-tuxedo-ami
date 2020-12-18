@@ -50,6 +50,12 @@ variable "resource_bucket_name" {
   description = "The name of the S3 resources bucket"
 }
 
+variable "resource_bucket_c_libraries_prefix" {
+  type        = string
+  default     = "libraries/c/i686"
+  description = "The object prefix for C shared object libraries within the S3 resources bucket"
+}
+
 variable "resource_bucket_oracle_database_prefix" {
   type        = string
   default     = "packages/oracle-database"
