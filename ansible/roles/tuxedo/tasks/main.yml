@@ -24,6 +24,7 @@
       - cyrus-sasl-devel.i686
       - expat-devel.i686
       - glibc-devel.i686
+      - glibc-static.i686
       - libcurl-devel.i686
       - ncurses-devel.i686
       - net-snmp-devel.i686
