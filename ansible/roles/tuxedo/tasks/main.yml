@@ -111,7 +111,3 @@
   file:
     path: temp_dir.path
     state: absent
-
-- fail:
-    msg: Skip final AMI creation during development
-  when: true
