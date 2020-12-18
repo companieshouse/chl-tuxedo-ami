@@ -58,7 +58,7 @@ variable "resource_bucket_c_libraries_prefix" {
 
 variable "resource_bucket_oracle_database_prefix" {
   type        = string
-  default     = "packages/oracle-database"
+  default     = "packages/oracle"
   description = "The object prefix for Oracle Database packages within the S3 resources bucket"
 }
 
