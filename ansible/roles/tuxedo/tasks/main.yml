@@ -21,10 +21,12 @@
 - name: Install i686 build-time software dependencies
   yum:
     name:
+      - cyrus-sasl-devel.i686
       - expat-devel.i686
       - glibc-devel.i686
       - libcurl-devel.i686
       - ncurses-devel.i686
+      - net-snmp-devel.i686
       - openssl-devel.i686
       - readline-devel.i686
     state: latest
@@ -43,8 +45,15 @@
   aws_s3:
     bucket: "{{ resource_bucket_name }}"
     object: "{{ resource_bucket_c_libraries_prefix }}/libstdc++-libc6.2-2.so.3"
-    dest: "/usr/lib/libstdc++-libc6.2-2.so.3"
+    dest: /usr/lib/libstdc++-libc6.2-2.so.3
     mode: get
+
+- name: Set permissions for i686 library dependencies
+  file:
+    path: /usr/lib/libstdc++-libc6.2-2.so.3
+    owner: root
+    group: root
+    mode: '0755'
 
 - name: Create service group
   group:
