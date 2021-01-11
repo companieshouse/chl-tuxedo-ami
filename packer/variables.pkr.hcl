@@ -10,6 +10,11 @@ variable "ansible_host_alias" {
   description = "The Ansible host alias"
 }
 
+variable "application_artefact_path" {
+  type        = string
+  description = "The path to the ephemeral application artefact directory during the build"
+}
+
 variable "aws_instance_type" {
   type        = string
   default     = "t3.small"
