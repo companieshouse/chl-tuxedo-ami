@@ -62,6 +62,12 @@ variable "resource_bucket_oracle_database_prefix" {
   description = "The object prefix for Oracle Database packages within the S3 resources bucket"
 }
 
+variable "resource_bucket_tuxedo_license_prefix" {
+  type        = string
+  default     = "licenses/tuxedo"
+  description = "The object prefix for Tuxedo license files within the S3 resources bucket"
+}
+
 variable "resource_bucket_tuxedo_prefix" {
   type        = string
   default     = "packages/tuxedo"

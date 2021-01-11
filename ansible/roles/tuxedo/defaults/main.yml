@@ -1,10 +1,7 @@
 ---
 
 chl_service_group: tuxedo
-chl_service_users:
-  - ceu
-  - ewf
-  - xml
+chl_service_user: tuxedo
 
 oracle_database_version: "10.2.0"
 oracle_database_install_directory: "/opt/oracle/{{ oracle_database_version }}"
