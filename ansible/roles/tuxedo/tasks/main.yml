@@ -141,8 +141,8 @@
 
 - name: Copy chl-tuxedo application artefact
   copy:
-    src: "{{ application_artefact_path }}/{{ application_artefact_prefix }}-{{ application_artefact_version }}.tar.gz"
-    dest: "{{ temp_dir.path }}/{{ application_artefact_prefix }}-{{ application_artefact_version }}.tar.gz"
+    src: "{{ application_artefact_path }}/{{ application_artefact_prefix }}-{{ application_artefact_version }}.zip"
+    dest: "{{ temp_dir.path }}/{{ application_artefact_prefix }}-{{ application_artefact_version }}.zip"
     owner: root
     group: root
     mode: '0644'
