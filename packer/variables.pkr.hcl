@@ -15,6 +15,17 @@ variable "application_artefact_path" {
   description = "The path to the ephemeral application artefact directory during the build"
 }
 
+variable "application_artefact_prefix" {
+  type        = string
+  default     = "chl-tuxedo"
+  description = "The name prefix of the application artefact"
+}
+
+variable "application_artefact_version" {
+  type        = string
+  description = "The version of the application artefact to be used"
+}
+
 variable "aws_instance_type" {
   type        = string
   default     = "t3.small"
