@@ -1,5 +1,17 @@
 ---
 
+- name: Find base image resource limit configs
+  find:
+    paths: /etc/security/limits.d
+    patterns: "*"
+  register: resource_limit_configs
+
+- name: Remove base image resource limit configs
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ resource_limit_configs.files }}"
+
 - name: Set hard global resource limits
   pam_limits:
     domain: '*'
