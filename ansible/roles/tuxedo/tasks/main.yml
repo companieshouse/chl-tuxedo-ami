@@ -162,8 +162,3 @@
   file:
     path: temp_dir.path
     state: absent
-
-- name: Explicit fail during testing
-  fail:
-    msg: Avoid building AMI during testing
-  when: true
