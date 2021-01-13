@@ -7,9 +7,6 @@ build {
     host_alias = "${var.ansible_host_alias}"
     playbook_file = "${var.playbook_file_path}"
     extra_arguments  = [
-      "-e", "application_artefact_path=${var.application_artefact_path}",
-      "-e", "application_artefact_prefix=${var.application_artefact_prefix}",
-      "-e", "application_artefact_version=${var.application_artefact_version}",
       "-e", "aws_region=${var.aws_region}",
       "-e", "resource_bucket_c_libraries_prefix=${var.resource_bucket_c_libraries_prefix}",
       "-e", "resource_bucket_name=${var.resource_bucket_name}",
