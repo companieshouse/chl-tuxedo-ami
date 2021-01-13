@@ -15,14 +15,14 @@ chl_service_users:
     uid: "{{ chl_service_user_id_minimum + (3 * chl_service_user_id_increment) | int }}"
 
 global_resource_limits:
-  - hard:
-      nproc: 72703
-      stack: unlimited
-      msgqueue: 819200
-  - soft:
-      nproc: 72703
-      stack: 10240
-      msgqueue: 819200
+  hard:
+    nproc: 72703
+    stack: unlimited
+    msgqueue: 819200
+  soft:
+    nproc: 72703
+    stack: 10240
+    msgqueue: 819200
 
 oracle_database_version: "10.2.0"
 oracle_database_install_directory: "/opt/oracle/{{ oracle_database_version }}"
