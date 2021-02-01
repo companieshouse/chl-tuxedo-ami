@@ -1,18 +1,18 @@
 ---
 
-chl_service_group: tuxedo
-chl_service_group_id: 1010
-chl_service_user_id_minimum: 1010
-chl_service_user_id_increment: 10
-chl_service_users:
+tuxedo_service_group: tuxedo
+tuxedo_service_group_id: 1010
+tuxedo_service_user_id_minimum: 1010
+tuxedo_service_user_id_increment: 10
+tuxedo_service_users:
   - name: ceu
-    uid:  "{{ chl_service_user_id_minimum + (0 * chl_service_user_id_increment) | int }}"
+    uid:  "{{ tuxedo_service_user_id_minimum + (0 * tuxedo_service_user_id_increment) | int }}"
   - name: chd
-    uid:  "{{ chl_service_user_id_minimum + (1 * chl_service_user_id_increment) | int }}"
+    uid:  "{{ tuxedo_service_user_id_minimum + (1 * tuxedo_service_user_id_increment) | int }}"
   - name: ewf
-    uid: "{{ chl_service_user_id_minimum + (2 * chl_service_user_id_increment) | int }}"
+    uid: "{{ tuxedo_service_user_id_minimum + (2 * tuxedo_service_user_id_increment) | int }}"
   - name: xml
-    uid: "{{ chl_service_user_id_minimum + (3 * chl_service_user_id_increment) | int }}"
+    uid: "{{ tuxedo_service_user_id_minimum + (3 * tuxedo_service_user_id_increment) | int }}"
 
 global_resource_limits:
   hard:

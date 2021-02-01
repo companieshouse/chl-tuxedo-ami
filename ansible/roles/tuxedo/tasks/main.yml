@@ -86,8 +86,8 @@
 
 - name: Create service group
   group:
-    name: "{{ chl_service_group }}"
-    gid: "{{ chl_service_group_id }}"
+    name: "{{ tuxedo_service_group }}"
+    gid: "{{ tuxedo_service_group_id }}"
     state: present
     system: no
 
@@ -95,10 +95,10 @@
   user:
     name: "{{ item.name }}"
     uid: "{{ item.uid }}"
-    groups: "{{ chl_service_group }}"
+    groups: "{{ tuxedo_service_group }}"
     shell: /bin/bash
     system: no
-  loop: "{{ chl_service_users }}"
+  loop: "{{ tuxedo_service_users }}"
 
 - name: Create temporary directory
   tempfile:
