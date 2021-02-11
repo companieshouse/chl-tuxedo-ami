@@ -1,0 +1,21 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# Set Oracle and Tuxedo paths
+export ORACLE_HOME={{ oracle_database_install_directory }}
+export TUXDIR={{ tuxedo_install_directory }}
+
+# Add Oracle and Tuxedo binaries to path
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$ORACLE_HOME/bin:$TUXDIR/bin:$HOME/{{ deployment_dir }}/appdir
+
+# Add Oracle and Tuxedo libraries to library path
+export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include:$ORACLE_HOME/lib:$TUXDIR/lib:$HOME/{{ deployment_dir }}/libdir
+
+export LC_ALL={{ system_locale }}
+export TUXCONFIG=$HOME/{{ deployment_dir }}/tuxconfig
+export BDMCONFIG=$HOME/{{ deployment_dir }}/bdmconfig
+export NLSPATH=$TUXDIR/locale/{{ system_locale }}

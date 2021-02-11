@@ -100,6 +100,15 @@
     system: no
   loop: "{{ tuxedo_service_users }}"
 
+- name: Create .bash_profile for service users
+  template:
+    src: bash_profile.j2
+    dest: "/home/{{ item.name }}/.bash_profile"
+    owner: "{{ item.name }}"
+    group: "{{ item.name }}"
+    mode: '0644'
+  loop: "{{ tuxedo_service_users }}"
+
 - name: Create temporary directory
   tempfile:
     state: directory
