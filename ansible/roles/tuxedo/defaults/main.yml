@@ -33,3 +33,6 @@ system_locale: C
 
 tuxedo_version: "8.1"
 tuxedo_install_directory: "/opt/tuxedo/{{ tuxedo_version }}"
+
+deployment_dir: deployment
+envfile_name: envfile
