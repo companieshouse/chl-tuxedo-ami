@@ -16,11 +16,13 @@ tuxedo_service_users:
 
 global_resource_limits:
   hard:
-    nproc: 72703
+    nofile: 8192
+    nproc: 4096
     stack: unlimited
     msgqueue: 819200
   soft:
-    nproc: 72703
+    nofile: 8192
+    nproc: 4096
     stack: 10240
     msgqueue: 819200
 
