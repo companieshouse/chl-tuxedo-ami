@@ -8,7 +8,7 @@
 
 - name: Remove base image resource limit configs
   file:
-    path: "{{ item }}"
+    path: "{{ item.path }}"
     state: absent
   loop: "{{ resource_limit_configs.files }}"
 
