@@ -81,7 +81,7 @@ variable "resource_bucket_tuxedo_prefix" {
 
 variable "root_volume_size_gb" {
   type        = number
-  default     = 10
+  default     = 20
   description = "The EC2 instance root volume size in Gibibytes (GiB)"
 }
 
