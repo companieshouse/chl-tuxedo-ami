@@ -1,5 +1,9 @@
 ---
 
+- name: Set timezone to Europe/London
+  community.general.timezone:
+    name: Europe/London
+
 - name: Find base image resource limit configs
   find:
     paths: /etc/security/limits.d
